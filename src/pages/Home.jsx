@@ -8,7 +8,7 @@ const imgs = {
   realEstate:
     "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80", // Nairobi apartments
   travels:
-    "https://images.unsplash.com/photo-1559589689-577aabd1db4f?auto=format&fit=crop&w=1200&q=80", // Nairobi city travel
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", // beach + ocean
   transport:
     "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80", // Logistics transport
   nairobiStreet:
@@ -37,6 +37,36 @@ export default function Home() {
           "Practical execution from start to finish",
         ]}
       />
+
+      <Section
+        eyebrow="Services"
+        title="Three industries — one reliable partner"
+        lead="Choose what you need help with. Each service is designed to reduce hassle, remove uncertainty, and get you a result you can trust."
+      >
+        <div id="services" />
+        <Cards
+          items={[
+            {
+              to: "/real-estate",
+              title: "Real Estate",
+              body: "Property search and shortlisting, evaluation support, coordination, and practical follow-through in Nairobi. We help you make confident decisions without wasting time.",
+              img: imgs.realEstate,
+            },
+            {
+              to: "/travels",
+              title: "Travels",
+              body: "Trip planning that’s actually usable: routing, bookings, itineraries, and local logistics in/around Nairobi and Kenya. Simple, organized, and aligned with your preferences.",
+              img: imgs.travels,
+            },
+            {
+              to: "/transport",
+              title: "Transport",
+              body: "Straightforward transport coordination for people and goods in Nairobi: clear expectations, reliable execution, and updates when it matters.",
+              img: imgs.transport,
+            },
+          ]}
+        />
+      </Section>
 
       <Section
         eyebrow="Nairobi, Kenya"
@@ -80,7 +110,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="photoGrid" style={{ marginTop: 14 }}>
+            <div className="photoGrid home" style={{ marginTop: 14 }}>
               <img
                 className="photo"
                 src={imgs.nairobiStreet}
@@ -102,36 +132,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
-
-      <Section
-        eyebrow="Services"
-        title="Three industries — one reliable partner"
-        lead="Choose what you need help with. Each service is designed to reduce hassle, remove uncertainty, and get you a result you can trust."
-      >
-        <div id="services" />
-        <Cards
-          items={[
-            {
-              to: "/real-estate",
-              title: "Real Estate",
-              body: "Property search and shortlisting, evaluation support, coordination, and practical follow-through in Nairobi. We help you make confident decisions without wasting time.",
-              img: imgs.realEstate,
-            },
-            {
-              to: "/travels",
-              title: "Travels",
-              body: "Trip planning that’s actually usable: routing, bookings, itineraries, and local logistics in/around Nairobi and Kenya. Simple, organized, and aligned with your preferences.",
-              img: imgs.travels,
-            },
-            {
-              to: "/transport",
-              title: "Transport",
-              body: "Straightforward transport coordination for people and goods in Nairobi: clear expectations, reliable execution, and updates when it matters.",
-              img: imgs.transport,
-            },
-          ]}
-        />
       </Section>
       <Section
         eyebrow="Team"
